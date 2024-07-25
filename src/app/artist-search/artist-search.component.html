@@ -1,0 +1,20 @@
+<div class="search-container">
+    <input type="text" [(ngModel)]="artistName" placeholder="Enter artist name" class="search-input">
+    <button (click)="search()" class="search-button">Искать альбомы</button>
+</div>
+
+<div *ngIf="albums.length > 0" class="albums-container">
+    <h2>Все альбомы исполнителя:</h2>
+    <ul class="albums-grid">
+      <li *ngFor="let album of albums" class="album-item">
+        <img [src]="album.cover_medium" alt="{{ album.title }} cover" class="album-cover">
+        <div class="album-details">
+          <h3 class="album-title">{{ album.title }}</h3>
+        </div>
+      </li>
+    </ul>
+</div>
+
+<div *ngIf="albums.length === 0 && artistName.trim()" class="no-results">
+    <p>No albums found.</p>
+</div>
