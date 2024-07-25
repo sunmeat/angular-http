@@ -3,6 +3,6 @@
 основные правки внесены в файлы:
 - app.config.ts
 - proxy.conf.json
-- anпular.json
+- angular.json
 
 CORS: https://developer.mozilla.org/ru/docs/Web/HTTP/CORS
